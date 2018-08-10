@@ -56,11 +56,22 @@
 
 .fluid-header {
   background-color: #000;
+  background-image: url('splatter-bg.png');
+  background-size: 30%;
   color: #fff;
   font-family: 'Yellowtail', cursive;
   font-size: 40px;
   text-align: center;
   padding-top: 80px;
+}
+
+.section-text {
+  background-color: #ff0000;
+  padding: 0px 10px;
+}
+
+.dropdown-item {
+  font-family: 'Karla', sans-serif!important;
 }
 
 .listings-container {
@@ -148,7 +159,7 @@ body {
   position: fixed;
   width: 100%;
   z-index: 10;
-  font-family: 'Yellotail', cursive;
+  font-family: 'Yellowtail', cursive;
 }
 
 // Bootstrap overrides
