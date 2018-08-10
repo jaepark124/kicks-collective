@@ -11,6 +11,18 @@
   padding: 10px;
 }
 
+%use-yellowtail {
+  font-family: 'Yellowtail', cursive;
+}
+
+#user_email, #user_password, #user_username, #user_password_confirmation {
+  @extend %form-field-dimensions;
+}
+
+.listing-name, .comment-header, .my-navbar, .fluid-header, .header-logo  {
+  @extend %use-yellowtail;
+}
+
 .container {
   max-width: 960px;
 }
@@ -63,7 +75,6 @@
   background-image: url('https://s3-us-west-1.amazonaws.com/kickscollective/large_images/splatter-bg.png');
   background-size: 30%;
   color: #fff;
-  font-family: 'Yellowtail', cursive;
   font-size: 40px;
   text-align: center;
   padding-top: 80px;
@@ -129,14 +140,8 @@ body {
   }
 }
 
-#user_email, #user_password, #user_username, #user_password_confirmation {
-  @extend %form-field-dimensions;
-}
-
-
 // Navbar styling
 .header-logo {
-  font-family: 'Yellowtail', cursive;
   font-size: 20px;
 }
 
@@ -151,7 +156,6 @@ body {
   position: fixed;
   width: 100%;
   z-index: 10;
-  font-family: 'Yellowtail', cursive;
 }
 
 // Bootstrap overrides
@@ -179,6 +183,10 @@ a {
 }
 
 // Shoe show page
+.comment-header {
+  text-align: center;
+}
+
 .shoe-listing-show-wrapper {
   height: 1600px;
   color: #fff;

@@ -1,7 +1,7 @@
 <div class="container shoe-listing-show-wrapper">
   <div class="container shoe-listing-details">
     <h2 class="listing-name"> <%= @shoe.name %> </h1>
-    <p> <%= image_tag @shoe.main_image.url %> </p>
+    <p> <%= image_tag @shoe.main_image.url, style: "width: 100%"%> </p>
     <p> BIN: <%= number_to_currency(@shoe.price) %> </p>
     <p> Posted by <%= @shoe.user.username %></p>
     <p> <%= user_badges(@shoe.user) %>
@@ -14,6 +14,7 @@
     <!-- End of comments form -->
 
     <div id ="comments" data-shoe-id="<%= @shoe.id%>">
+      <h2 class="comment-header"> Comments Thread </h2>
       <%= render @shoe.comments %>
     </div>
   </div>
