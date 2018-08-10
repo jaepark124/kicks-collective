@@ -3,13 +3,13 @@
 one:
   name: MyString
   price: 1
-  image_url: MyString
-  thumb_url: MyString
+  main_image: MyString
+  thumb_image: MyString
   brand: MyString
 
 two:
   name: MyString
   price: 1
-  image_url: MyString
-  thumb_url: MyString
+  main_image: MyString
+  thumb_image: MyString
   brand: MyString

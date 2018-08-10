@@ -65,7 +65,7 @@ class ShoesController < ApplicationController
     private
       # Never trust parameters from the scary internet, only allow the white list through.
       def shoe_params
-        params.require(:shoe).permit(:name, :price, :brand)
+        params.require(:shoe).permit(:name, :price, :brand, :main_image, :thumb_image)
       end
 
       def set_shoe

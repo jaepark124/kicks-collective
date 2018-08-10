@@ -7,20 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-prices = [100, 100, 200, 200, 300, 300, 400, 400, 500, 500]
 
 10.times do |num|
-  User.create!(email: "sneakerhead#{num}@kc.com",
+  User.create!(email: "test#{num}@kc.com",
                username: "sneakerhead#{num}",
                password: "password",
-               reputation: num).shoes.create!(
-                 name: "Yeezy Boost 350",
-                 price: prices[num],
-                 brand: "Adidas"
-               )
+               reputation: rand(1..9)
+              )
 end
 
-puts '5 Users & their shoe created!'
 
 brands = ["Jordan", "Nike", "Adidas", "New Balance"]
 

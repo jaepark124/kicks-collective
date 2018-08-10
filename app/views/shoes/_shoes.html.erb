@@ -1,7 +1,7 @@
 <% @shoes.each do |shoe| %>
 <div class="col-md-4">
   <div class="card shoe-card">
-    <%= image_tag shoe.thumb_url %>
+    <%= image_tag shoe.thumb_image.url %>/
       <div class="card-overlay">
         <span class="badge badge-pill badge-danger">
           <%= shoe.brand %> </span>

@@ -17,6 +17,14 @@
       <%= form.collection_select :brand, @brands, :name, :name %>
     </div>
 
+    <div class="field">
+      <%= form.file_field :main_image %>
+    </div>
+
+    <div class="field">
+      <%= form.file_field :thumb_image %>
+    </div>
+
     <div class="actions">
       <%= action_button_for_forms(form) %>
     </div>

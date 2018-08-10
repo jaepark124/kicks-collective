@@ -3,8 +3,8 @@ class CreateShoes < ActiveRecord::Migration[5.2]
     create_table :shoes do |t|
       t.string :name
       t.integer :price
-      t.string :image_url
-      t.string :thumb_url
+      t.string :main_image
+      t.string :thumb_image
       t.string :brand
 
       t.timestamps

@@ -68,5 +68,10 @@ gem 'jquery-rails'
 gem 'redis', '~> 4.0', '>= 4.0.1'
 gem 'aws-sdk-s3', '~> 1'
 gem "font-awesome-rails"
+gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-aws'
+gem 'dotenv-rails', '~> 2.5'
+gem 'mini_magick', '~> 4.8'
+
 
 ruby '2.3.1'
