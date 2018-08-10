@@ -1,4 +1,9 @@
 module ApplicationHelper
+  def back_to_marketplace
+    if params[:controller] == "shoes"  && params[:action] == "show"
+      link_to "Back To Marketplace", shoes_path
+    end
+  end
 
   def login_helper
     if user_signed_in?
@@ -25,7 +30,7 @@ module ApplicationHelper
   end
 
   def user_badges(user)
-    if user.reputation > 9
+    if user.reputation > 6
       '<span class="badge badge-pill badge-success"> Reputable Seller </span>'.html_safe
     end
   end

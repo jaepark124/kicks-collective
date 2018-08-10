@@ -7,19 +7,22 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-5.times do |num|
+prices = [100, 100, 200, 200, 300, 300, 400, 400, 500, 500]
+
+10.times do |num|
   User.create!(email: "sneakerhead#{num}@kc.com",
                username: "sneakerhead#{num}",
-               password: "password").shoes.create!(
-                 name: "Yeezy",
-                 price: 600,
+               password: "password",
+               reputation: num).shoes.create!(
+                 name: "Yeezy Boost 350",
+                 price: prices[num],
                  brand: "Adidas"
                )
 end
 
 puts '5 Users & their shoe created!'
 
-brands = ["Jordan", "Nike", "Adidas", "Yeezy", "New Balance"]
+brands = ["Jordan", "Nike", "Adidas", "New Balance"]
 
 brands.length.times do |b|
   Brand.create!(name: brands[b])
