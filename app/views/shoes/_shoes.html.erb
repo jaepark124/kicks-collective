@@ -4,7 +4,8 @@
     <%= image_tag shoe.thumb_image.url, class: "card-picture" %>
       <div class="card-overlay">
         <span class="badge badge-pill badge-danger">
-          <%= shoe.brand %> </span>
+          <%= shoe.brand %>
+        </span>
         </div>
         <div class="card-body">
           <div class="news-title">
@@ -19,6 +20,8 @@
           <p class="card-text">
             <small class="text-time">
               Created <%= distance_of_time_in_words(shoe.created_at, Time.now) %> ago
+              <br/>
+              Offered by <%= shoe.user.username %>
             </small>
           </p>
         </div>
