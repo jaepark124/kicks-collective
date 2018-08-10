@@ -2,31 +2,22 @@ class ShoesController < ApplicationController
   before_action :set_shoe, only: [:show, :edit, :update, :destroy]
   layout "application"
 
-    # GET /Shoes
-    # GET /Shoes.json
     def index
       @shoes = Shoe.includes(:comments).all.default_sort
     end
 
-    # GET /Shoes/1
-    # GET /Shoes/1.json
     def show
       @comment = Comment.new
     end
 
-
-    # GET /Shoes/new
     def new
       @shoe = Shoe.new
       @brands = Brand.all.by_name
     end
 
-    # GET /Shoes/1/edit
     def edit
     end
 
-    # POST /Shoes
-    # POST /Shoes.json
     def create
       @shoe = Shoe.new(shoe_params)
       @shoe.user_id = current_user.id
@@ -41,8 +32,6 @@ class ShoesController < ApplicationController
       end
     end
 
-    # PATCH/PUT /Shoes/1
-    # PATCH/PUT /Shoes/1.json
     def update
       respond_to do |format|
         if @shoe.update(shoe_params)
@@ -53,12 +42,10 @@ class ShoesController < ApplicationController
       end
     end
 
-    # DELETE /samples/1
-    # DELETE /samples/1.json
     def destroy
       @shoe.destroy
       respond_to do |format|
-        format.html { redirect_to samples_url, notice: 'Sample was successfully destroyed.' }
+        format.html { redirect_to shoes_path, notice: 'Sample was successfully destroyed.' }
       end
     end
 
@@ -72,5 +59,5 @@ class ShoesController < ApplicationController
         @shoe= Shoe.includes(:comments).find(params[:id])
         @brands = Brand.all.by_name
       end
-
+      
 end
