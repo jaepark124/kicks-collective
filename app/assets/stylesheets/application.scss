@@ -113,7 +113,6 @@ body {
 
 .form-header {
   font-family: 'Yellotail', cursive;
-  margin-bottom: 50px;
 }
 
 .form-btn {
@@ -130,21 +129,10 @@ body {
   }
 }
 
-#user_email {
+#user_email, #user_password, #user_username, #user_password_confirmation {
   @extend %form-field-dimensions;
 }
 
-#user_password {
-  @extend %form-field-dimensions;
-}
-
-#user_username {
-  @extend %form-field-dimensions;
-}
-
-#user_password_confirmation {
-  @extend %form-field-dimensions;
-}
 
 // Navbar styling
 .header-logo {
@@ -224,6 +212,10 @@ a {
 
 
 // New Shoe form
+.upload-btn {
+  width: 300px;
+  margin-top: 10px;
+}
 
 .new-shoe-container {
   background-color: #000;
@@ -233,18 +225,7 @@ a {
   color: #fff;
 }
 
-#shoe_name {
+#shoe_name, #shoe_price, #shoe_brand {
   @extend %form-field-dimensions;
   margin: 10px;
-}
-
-#shoe_price {
-  @extend %form-field-dimensions;
-  margin: 10px;
-}
-
-#shoe_brand {
-  width: 375px;
-  margin-bottom: 50px;
-  margin-top: 20px;
 }

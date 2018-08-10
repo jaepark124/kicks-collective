@@ -4,26 +4,27 @@
   <%= form_for(@shoe) do |form| %>
 
     <div class="field">
-      <%= form.label :name %>
-      <%= form.text_field :name, size: "50x50", maxlength: 20 %>
+      <%= form.text_field :name, maxlength: 20, placeholder: 'name' %>
     </div>
 
     <div class="field">
-      <%= form.label :price %>
-      <%= form.number_field :price %>
+      <%= form.number_field :price, placeholder: 'price' %>
     </div>
 
     <div class="field">
-      <%= form.label :brand %>
-      <%= form.text_field :brand %>
+      <%= form.text_field :brand, placeholder: 'brand' %>
     </div>
 
     <div class="field">
-      <%= form.file_field :main_image %>
+      <label class="btn btn-info upload-btn">
+        Upload a main image file <%= form.file_field :main_image, style: 'display:none;' %>
+      </label>
     </div>
 
     <div class="field">
-      <%= form.file_field :thumb_image %>
+      <label class="btn btn-info upload-btn">
+        Upload a thumb image file <%= form.file_field :thumb_image, style: 'display:none;' %>
+      </label>
     </div>
 
     <div class="actions">
