@@ -49,6 +49,10 @@
   transition: all .2s ease-in-out;
   color: #000;
 
+  img {
+    width: 100%;
+  }
+
   &:hover {
     transform: scale(1.1);
   }
@@ -56,7 +60,7 @@
 
 .fluid-header {
   background-color: #000;
-  background-image: url('splatter-bg.png');
+  background-image: url('https://s3-us-west-1.amazonaws.com/kickscollective/large_images/splatter-bg.png');
   background-size: 30%;
   color: #fff;
   font-family: 'Yellowtail', cursive;

@@ -1,7 +1,7 @@
 <div class="container shoe-listing-show-wrapper">
   <div class="container shoe-listing-details">
     <h2 class="listing-name"> <%= @shoe.name %> </h1>
-    <p> <%= image_tag @shoe.thumb_image.url %> </p>
+    <p> <%= image_tag @shoe.main_image.url %> </p>
     <p> BIN: <%= number_to_currency(@shoe.price) %> </p>
     <p> Posted by <%= @shoe.user.username %></p>
     <p> <%= user_badges(@shoe.user) %>
