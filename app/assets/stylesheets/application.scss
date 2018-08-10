@@ -127,6 +127,11 @@ body {
   font-family: 'Yellotail', cursive;
 }
 
+.no-hover {
+  pointer-events:none!important;
+  border: 1px solid #fff;
+}
+
 .form-btn {
   width: 200px;
   border-radius: 100px;
