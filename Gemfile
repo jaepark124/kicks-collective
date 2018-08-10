@@ -68,3 +68,5 @@ gem 'jquery-rails'
 gem 'redis', '~> 4.0', '>= 4.0.1'
 gem 'aws-sdk-s3', '~> 1'
 gem "font-awesome-rails"
+
+ruby '2.3.1'
