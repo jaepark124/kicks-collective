@@ -1,4 +1,5 @@
 class ShoesController < ApplicationController
+  before_action :set_shoe, only: [:show, :edit, :update, :destroy]
   layout "application"
 
     # GET /Shoes
@@ -10,7 +11,6 @@ class ShoesController < ApplicationController
     # GET /Shoes/1
     # GET /Shoes/1.json
     def show
-      @shoe = Shoe.includes(:comments).find(params[:id])
       @comment = Comment.new
     end
 
@@ -35,7 +35,7 @@ class ShoesController < ApplicationController
         if @shoe.save
           format.html { redirect_to shoes_path, notice: 'Shoe was successfully created.' }
         else
-          puts "Something went wrong"
+          # puts "Something went wrong"
           format.html { render :new }
         end
       end
@@ -46,7 +46,7 @@ class ShoesController < ApplicationController
     def update
       respond_to do |format|
         if @shoe.update(shoe_params)
-          format.html { redirect_to shoes_path, notice: 'Shoe was successfully updated.' }
+          format.html { redirect_to shoe_path(@shoe), notice: 'Shoe was successfully updated.' }
         else
           format.html { render :edit }
         end
@@ -66,6 +66,11 @@ class ShoesController < ApplicationController
       # Never trust parameters from the scary internet, only allow the white list through.
       def shoe_params
         params.require(:shoe).permit(:name, :price, :brand)
+      end
+
+      def set_shoe
+        @shoe= Shoe.includes(:comments).find(params[:id])
+        @brands = Brand.all.by_name
       end
 
 end

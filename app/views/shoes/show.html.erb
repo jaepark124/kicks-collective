@@ -5,6 +5,7 @@
     <p> BIN: <%= number_to_currency(@shoe.price) %> </p>
     <p> Posted by <%= @shoe.user.username %></p>
     <p> <%= user_badges(@shoe.user) %>
+    <p> <%= edit_authorization(@shoe) %>
     <p> Created <%= distance_of_time_in_words(@shoe.created_at, Time.now) %> ago</p>
 
     <!-- Start of comments form  -->

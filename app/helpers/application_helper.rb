@@ -35,11 +35,25 @@ module ApplicationHelper
     end
   end
 
+  def edit_authorization(shoe)
+    if current_user == shoe.user
+      link_to "Edit Listing", edit_shoe_path(shoe), class: 'btn btn-warning'
+    end
+  end
+
   def session_greeting
     if user_signed_in?
       '<h3>Welcome back '.html_safe + current_user.username + ' !</h3>'.html_safe
     else
       '<h3>Create an account so you can start posting!</h3'.html_safe
+    end
+  end
+
+  def action_button_for_forms(form)
+    if params[:action] == "edit"
+      form.submit "Update", class: 'form-btn'
+    else
+      form.submit "Post", class: 'form-btn'
     end
   end
 end
