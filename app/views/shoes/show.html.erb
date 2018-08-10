@@ -1,0 +1,19 @@
+<div class="container shoe-listing-show-wrapper">
+  <div class="container shoe-listing-details">
+    <h2 class="listing-name"> <%= @shoe.name %> </h1>
+    <p> <%= image_tag @shoe.thumb_url %> </p>
+    <p> BIN: <%= number_to_currency(@shoe.price) %> </p>
+    <p> Posted by <%= @shoe.user.username %></p>
+    <p> <%= user_badges(@shoe.user) %>
+    <p> Created <%= distance_of_time_in_words(@shoe.created_at, Time.now) %> ago</p>
+
+    <!-- Start of comments form  -->
+    <!-- Url hash parameter prevents from sending to a new controller/page -->
+    <%= render 'shoes/comment_form' %>
+    <!-- End of comments form -->
+
+    <div id ="comments" data-shoe-id="<%= @shoe.id%>">
+      <%= render @shoe.comments %>
+    </div>
+  </div>
+</div>

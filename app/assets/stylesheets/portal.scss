@@ -1,0 +1,34 @@
+@import 'bootstrap';
+@import 'footer';
+
+$white: #fff;
+
+* {
+  font-family: 'Anton', sans-serif;
+}
+
+.cover-container {
+  background-image: url('https://s3-us-west-1.amazonaws.com/kickscollective/large_images/main-cover.png');
+  background-size: cover;
+  height: 1000px!important;
+  padding: 100px!important;
+}
+
+.kc-welcome {
+  font-size: 100px;
+  color: $white;
+  text-shadow: 2px 2px #000;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-shadow: 1px 1px #000;
+  color: $white;
+  letter-spacing: 1px;
+}
+
+.masthead-brand {
+  font-family: 'Monoton', cursive;
+  color: $white;
+}

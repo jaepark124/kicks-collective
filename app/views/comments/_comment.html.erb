@@ -1,0 +1,17 @@
+<div class="comment-card">
+  <div class="card">
+    <div class="card-block">
+      <div class="row">
+        <div class="col-md-2 username-col">
+          <%= comment.user.username %>
+          <div class="timestamp-col">
+            <%= distance_of_time_in_words(comment.created_at, Time.now) %> ago
+          </div>
+        </div>
+        <div class="col-md-10">
+          <%= comment.body %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container-fluid login-page-container">
+  <div class="container new-shoe-container">
+  <h2 class="form-header">Shoe Details</h2>
+  <%= form_for(@shoe) do |form| %>
+
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, size: "50x50", maxlength: 20 %>
+    </div>
+
+    <div class="field">
+      <%= form.label :price %>
+      <%= form.number_field :price %>
+    </div>
+
+    <div class="field">
+      <%= form.collection_select :brand, @brands, :name, :name %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "List", class: 'form-btn' %>
+    </div>
+    <% end %>
+  </div>
+</div>

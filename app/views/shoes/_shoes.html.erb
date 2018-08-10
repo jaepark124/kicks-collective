@@ -1,0 +1,27 @@
+<% @shoes.each do |shoe| %>
+<div class="col-md-4">
+  <div class="card shoe-card">
+    <%= image_tag shoe.thumb_url %>
+      <div class="card-overlay">
+        <span class="badge badge-pill badge-danger">
+          <%= shoe.brand %> </span>
+        </div>
+        <div class="card-body">
+          <div class="news-title">
+            <h5 class=" title-small">
+              <%= link_to shoe.name, shoe_path(shoe)%>
+              <br/>
+              <%= user_badges(shoe.user) %>
+              <br/>
+              Asking Price: <%= number_to_currency(shoe.price) %>
+            </h5>
+          </div>
+          <p class="card-text">
+            <small class="text-time">
+              Created <%= distance_of_time_in_words(shoe.created_at, Time.now) %> ago
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+<% end %>

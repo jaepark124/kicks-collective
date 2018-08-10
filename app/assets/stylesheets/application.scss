@@ -1,0 +1,235 @@
+@import "bootstrap";
+@import "shoes";
+@import "static_pages";
+@import "font-awesome";
+@import "footer";
+
+%form-field-dimensions {
+  width: 300px;
+  border-radius: 100px;
+  border: none;
+  padding: 10px;
+}
+
+.container {
+  max-width: 960px;
+}
+
+/*
+ * Extra utilities
+ */
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.flex-equal > * {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden { overflow: hidden; }
+
+.card-overlay {
+  position: absolute;
+  padding: 1.25rem;
+}
+
+.shoe-card {
+  margin: 10px;
+  transition: all .2s ease-in-out;
+  color: #000;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.fluid-header {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Yellowtail', cursive;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.listings-container {
+  max-width: 1000px;
+  min-height: 600px;
+  background-color: #d76f3c;
+  padding: 50px;
+  color: #fff;
+}
+
+.text-time {
+  color: #696969;
+}
+
+body {
+  background-image: url('https://s3-us-west-1.amazonaws.com/kickscollective/large_images/wallpaper.jpeg');
+  background-size: 40% 40%;
+}
+
+// Login Page style
+.login-page-container {
+  min-height: 1200px;
+  text-align: center;
+  padding: 250px;
+}
+
+
+.login-form-container {
+  padding: 100px 0px 100px 0px;
+  max-width: 400px;
+  background-color: black;
+  color: #fff;
+  line-height: 2;
+}
+
+.form-header {
+  font-family: 'Yellotail', cursive;
+  margin-bottom: 50px;
+}
+
+.form-btn {
+  width: 200px;
+  border-radius: 100px;
+  background-color: black;
+  margin: 20px;
+  color: white;
+
+  &:hover {
+    color: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    cursor: pointer;
+  }
+}
+
+#user_email {
+  @extend %form-field-dimensions;
+}
+
+#user_password {
+  @extend %form-field-dimensions;
+}
+
+#user_username {
+  @extend %form-field-dimensions;
+}
+
+#user_password_confirmation {
+  @extend %form-field-dimensions;
+}
+
+// Navbar styling
+.header-logo {
+  font-family: 'Yellowtail', cursive;
+  font-size: 20px;
+}
+
+.red-collective-header {
+  font-size: 30px;
+  color: red;
+}
+
+.my-navbar {
+  color: #fff;
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  font-family: 'Yellotail', cursive;
+}
+
+// Bootstrap overrides
+.dropdown-menu {
+  top: 90%;
+  right: 0;
+  left: 80%;
+  background-color: #000;
+  color: #fff;
+}
+
+.dropdown-item {
+  color: #fff;
+  &:hover {
+    color: #000!important;
+  }
+}
+
+.dropdown-toggle {
+  color: #fff;
+}
+
+a {
+  color: inherit!important;
+}
+
+// Shoe show page
+.shoe-listing-show-wrapper {
+  height: 1600px;
+  color: #fff;
+}
+
+.shoe-listing-details {
+  background-color: black;
+  height: 100%;
+  padding: 100px;
+}
+
+.comment-card {
+  color: #000;
+}
+
+#comment_body {
+  margin-bottom: 20px;
+}
+
+.card-block {
+  padding: 20px;
+}
+
+.username-col {
+  border-right: 1px solid lightgray;
+}
+
+.timestamp-col {
+  font-size: 10px;
+}
+
+
+// New Shoe form
+
+.new-shoe-container {
+  background-color: #000;
+  height: 500px;
+  width: 750px;
+  padding-top: 50px;
+  color: #fff;
+}
+
+#shoe_name {
+  @extend %form-field-dimensions;
+  margin: 10px;
+}
+
+#shoe_price {
+  @extend %form-field-dimensions;
+  margin: 10px;
+}
+
+#shoe_brand {
+  width: 375px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
