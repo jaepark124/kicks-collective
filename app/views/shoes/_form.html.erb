@@ -14,7 +14,8 @@
     </div>
 
     <div class="field">
-      <%= form.collection_select :brand, @brands, :name, :name %>
+      <%= form.label :brand %>
+      <%= form.text_field :brand %>
     </div>
 
     <div class="field">
