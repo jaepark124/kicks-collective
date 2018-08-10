@@ -37,7 +37,7 @@ module ApplicationHelper
 
   def edit_authorization(shoe)
     if current_user == shoe.user
-      link_to "Edit Listing", edit_shoe_path(shoe), class: 'btn btn-warning'
+      render partial: 'shared/edit_links', locals: {shoe: shoe}
     end
   end
 
